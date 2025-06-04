@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abdeldjalil Dahnoun - Portfolio</title>
+    <link rel="stylesheet" href="Portfolio.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  </head>
+  <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+  ></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "Mzbj1LbnJdqJLwM3D",
+      });
+    })();
+  </script>
+  <body>
+    <!-- Cursor Follower -->
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading-screen">
+      <div class="loading-content">
+        <div class="loading-logo">
+          <div class="loading-text">AD</div>
+          <div class="loading-ring"></div>
+          <div class="loading-pulse"></div>
+        </div>
+        <div class="loading-title">
+          <h2>Abdeldjalil Dahnoun</h2>
+          <p>Computer Science</p>
+        </div>
+        <div class="loading-progress">
+          <div class="loading-bar"></div>
+          <div class="loading-percentage">0%</div>
+        </div>
+        <div class="loading-messages">
+          <p class="loading-message active">Initializing Portfolio...</p>
+          <p class="loading-message">Loading Projects...</p>
+          <p class="loading-message">Setting up Skills...</p>
+          <p class="loading-message">Preparing Experience...</p>
+          <p class="loading-message">Almost Ready...</p>
+        </div>
+        <div class="loading-dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating Particles Background -->
+    <div class="particles-container" id="particles"></div>
+
+    <!-- Dark Mode Toggle -->
+    <button
+      id="theme-toggle"
+      class="theme-toggle"
+      aria-label="Toggle dark mode"
+    >
+      <i data-lucide="sun" class="sun-icon"></i>
+      <i data-lucide="moon" class="moon-icon"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="#home" class="nav-link active" data-section="home">
+            <i data-lucide="home"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#projects" class="nav-link" data-section="projects">
+            <i data-lucide="folder-open"></i>
+            <span>Projects</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#skills" class="nav-link" data-section="skills">
+            <i data-lucide="code"></i>
+            <span>Skills</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#experience" class="nav-link" data-section="experience">
+            <i data-lucide="briefcase"></i>
+            <span>Experience</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#education" class="nav-link" data-section="education">
+            <i data-lucide="graduation-cap"></i>
+            <span>Education</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#contact" class="nav-link" data-section="contact">
+            <i data-lucide="mail"></i>
+            <span>Contact</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section">
+      <div class="container">
+        <div class="home-content">
+          <div class="profile-image-container">
+            <div class="profile-gradient"></div>
+            <div class="profile-image">
+              <img src="uploads/images/myphoto.jpg" alt="Abdeldjalil Dahnoun" />
+            </div>
+            <div class="profile-status">
+              <div class="status-dot"></div>
+            </div>
+          </div>
+
+          <h1 class="home-title">
+            <span class="title-line">Abdeldjalil</span>
+            <span class="title-line">Dahnoun</span>
+          </h1>
+          <div class="home-subtitle-container">
+            <p class="home-subtitle">
+              <span class="typing-text" id="typing-text"></span>
+              <span class="cursor-blink">|</span>
+            </p>
+          </div>
+          <p class="home-description">
+            Fresh Computer Science graduate passionate about web development. I
+            specialize in creating dynamic websites using PHP, JavaScript, and
+            modern web technologies. Currently seeking opportunities to grow and
+            contribute to innovative projects.
+          </p>
+
+          <div class="home-buttons">
+            <a href="#contact" class="btn btn-primary btn-magnetic">
+              <span class="btn-text">
+                <i data-lucide="mail"></i>
+                Hire Me
+              </span>
+              <div class="btn-bg"></div>
+            </a>
+            <a href="#projects" class="btn btn-outline btn-magnetic">
+              <span class="btn-text">
+                <i data-lucide="eye"></i>
+                View Work
+              </span>
+              <div class="btn-bg"></div>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/abdeldjalil-dahnoun-7b9508317/"
+              class="btn btn-icon btn-magnetic"
+              target="_blank"
+              title="LinkedIn Profile"
+            >
+              <i data-lucide="linkedin"></i>
+            </a>
+            <a
+              href="https://github.com/thisissam-code"
+              class="btn btn-icon btn-magnetic"
+              target="_blank"
+              title="GitHub Profile"
+            >
+              <i data-lucide="github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="scroll-indicator">
+        <div class="scroll-text">Scroll Down</div>
+        <div class="scroll-arrow">
+          <i data-lucide="chevron-down"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title reveal-text">My Projects</h2>
+          <p class="section-subtitle">
+            Here are the projects I've worked on during my studies
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <div class="project-card" data-category="web">
+            <div class="project-image">
+              <img
+                src="uploads/images/projects/login-page.png"
+                alt="E-Learning Platform for Pilots"
+              />
+              <div class="project-overlay">
+                <div class="project-actions">
+                  <button class="action-btn" data-action="preview">
+                    <i data-lucide="eye"></i>
+                  </button>
+                  <button class="action-btn" data-action="code">
+                    <i data-lucide="github"></i>
+                  </button>
+                  <button class="action-btn" data-action="live">
+                    <i data-lucide="external-link"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3 class="project-title">E-Learning Platform for Pilots</h3>
+                <div class="project-status">
+                  <span class="status-badge completed">Completed</span>
+                </div>
+              </div>
+              <div class="project-tech">
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Bootstrap</span>
+                <span class="tech-tag">HTML/CSS</span>
+              </div>
+              <p class="project-description">
+                A comprehensive e-learning platform designed for pilot training.
+                Features course management, progress tracking, and examination
+                system. Built as part of my academic project with focus on user
+                experience and functionality.
+              </p>
+              <div class="project-metrics">
+                <div class="metric">
+                  <i data-lucide="users"></i>
+                  <span>Multi-user System</span>
+                </div>
+                <div class="metric">
+                  <i data-lucide="book-open"></i>
+                  <span>Course Management</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-category="web">
+            <div class="project-image">
+              <img
+                src="uploads/images/projects/Capture d'écran 2025-06-04 030128.png"
+                alt="Dentist Cabinet Management"
+              />
+              <div class="project-overlay">
+                <div class="project-actions">
+                  <button class="action-btn" data-action="preview">
+                    <i data-lucide="eye"></i>
+                  </button>
+                  <button class="action-btn" data-action="code">
+                    <i data-lucide="github"></i>
+                  </button>
+                  <button class="action-btn" data-action="live">
+                    <i data-lucide="external-link"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3 class="project-title">Dentist Cabinet Management System</h3>
+                <div class="project-status">
+                  <span class="status-badge completed">Completed</span>
+                </div>
+              </div>
+              <div class="project-tech">
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">jQuery</span>
+                <span class="tech-tag">Bootstrap</span>
+                <span class="tech-tag">CSS3</span>
+              </div>
+              <p class="project-description">
+                A management system for dental clinics featuring patient
+                records, appointment scheduling, and treatment tracking.
+                Designed to streamline clinic operations and improve patient
+                care management.
+              </p>
+              <div class="project-metrics">
+                <div class="metric">
+                  <i data-lucide="calendar"></i>
+                  <span>Appointment System</span>
+                </div>
+                <div class="metric">
+                  <i data-lucide="file-text"></i>
+                  <span>Patient Records</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-category="web">
+            <div class="project-image">
+              <img
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop"
+                alt="Portfolio Website"
+              />
+              <div class="project-overlay">
+                <div class="project-actions">
+                  <button class="action-btn" data-action="preview">
+                    <i data-lucide="eye"></i>
+                  </button>
+                  <button class="action-btn" data-action="code">
+                    <i data-lucide="github"></i>
+                  </button>
+                  <button class="action-btn" data-action="live">
+                    <i data-lucide="external-link"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3 class="project-title">Interactive Portfolio Website</h3>
+                <div class="project-status">
+                  <span class="status-badge in-progress">Current</span>
+                </div>
+              </div>
+              <div class="project-tech">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Responsive</span>
+              </div>
+              <p class="project-description">
+                Modern, responsive portfolio website with advanced animations,
+                dark mode support, and interactive elements. Showcases my skills
+                and projects with a focus on user experience and modern design.
+              </p>
+              <div class="project-metrics">
+                <div class="metric">
+                  <i data-lucide="smartphone"></i>
+                  <span>Fully Responsive</span>
+                </div>
+                <div class="metric">
+                  <i data-lucide="zap"></i>
+                  <span>Interactive Design</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title reveal-text">Technical Skills</h2>
+          <p class="section-subtitle">Technologies I work with</p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-card" data-skill="frontend">
+            <div class="skill-header">
+              <div class="skill-icon">
+                <i data-lucide="globe"></i>
+              </div>
+              <h3>Frontend Development</h3>
+              <div class="skill-level">
+                <div class="level-bar">
+                  <div class="level-fill" data-level="75"></div>
+                </div>
+                <span class="level-text">75%</span>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag" data-years="2">HTML5</span>
+              <span class="skill-tag" data-years="2">CSS3</span>
+              <span class="skill-tag" data-years="2">JavaScript</span>
+              <span class="skill-tag" data-years="1">Bootstrap</span>
+              <span class="skill-tag" data-years="1">jQuery</span>
+            </div>
+          </div>
+
+          <div class="skill-card" data-skill="backend">
+            <div class="skill-header">
+              <div class="skill-icon">
+                <i data-lucide="server"></i>
+              </div>
+              <h3>Backend Development</h3>
+              <div class="skill-level">
+                <div class="level-bar">
+                  <div class="level-fill" data-level="70"></div>
+                </div>
+                <span class="level-text">70%</span>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag" data-years="2">PHP</span>
+              <span class="skill-tag" data-years="2">MySQL</span>
+            </div>
+          </div>
+
+          <div class="skill-card" data-skill="tools">
+            <div class="skill-header">
+              <div class="skill-icon">
+                <i data-lucide="wrench"></i>
+              </div>
+              <h3>Tools & Technologies</h3>
+              <div class="skill-level">
+                <div class="level-bar">
+                  <div class="level-fill" data-level="65"></div>
+                </div>
+                <span class="level-text">65%</span>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag" data-years="2">Git</span>
+              <span class="skill-tag" data-years="1">VS Code</span>
+              <span class="skill-tag" data-years="2">XAMPP</span>
+              <span class="skill-tag" data-years="1">Responsive Design</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title reveal-text">Experience & Activities</h2>
+          <p class="section-subtitle">
+            My journey in computer science, technology, and personal development
+          </p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item" data-year="2022">
+            <div class="timeline-icon">
+              <i data-lucide="users"></i>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>CSCC Club Member</h3>
+                <span class="timeline-date">
+                  <i data-lucide="calendar"></i>
+                  2022 - Present
+                </span>
+              </div>
+              <p class="timeline-company">
+                <i data-lucide="graduation-cap"></i>
+                Computer Science Club - Saad Dahleb University
+              </p>
+              <p class="timeline-description">
+                Active member of the Computer Science Club, participating in
+                coding workshops, tech talks, and collaborative projects.
+                Engaged in learning new technologies and sharing knowledge with
+                fellow students.
+              </p>
+              <div class="timeline-achievements">
+                <h4>Activities & Contributions:</h4>
+                <ul>
+                  <li>
+                    <i data-lucide="target"></i>Participated in coding workshops
+                    and seminars
+                  </li>
+                  <li>
+                    <i data-lucide="target"></i>Collaborated on group
+                    programming projects
+                  </li>
+                  <li>
+                    <i data-lucide="target"></i>Helped organize tech events and
+                    competitions
+                  </li>
+                  <li>
+                    <i data-lucide="target"></i>Mentored junior students in
+                    programming basics
+                  </li>
+                </ul>
+              </div>
+              <div class="timeline-tech">
+                <span class="tech-tag">Teamwork</span>
+                <span class="tech-tag">Leadership</span>
+                <span class="tech-tag">Problem Solving</span>
+                <span class="tech-tag">Communication</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-year="2024">
+            <div class="timeline-icon">
+              <i data-lucide="laptop"></i>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>Personal Projects Developer</h3>
+                <span class="timeline-date">
+                  <i data-lucide="calendar"></i>
+                  2023 - Present
+                </span>
+              </div>
+              <p class="timeline-company">
+                <i data-lucide="heart"></i>
+                Self-Initiated Projects
+              </p>
+              <p class="timeline-description">
+                Beyond academic requirements, I develop personal projects to
+                explore new technologies, solve real-world problems, and
+                continuously improve my programming skills. These projects
+                reflect my passion for web development and commitment to
+                learning.
+              </p>
+              <div class="timeline-achievements">
+                <h4>Personal Development:</h4>
+                <ul>
+                  <li>
+                    <i data-lucide="target"></i>Built projects outside
+                    curriculum requirements
+                  </li>
+                  <li>
+                    <i data-lucide="target"></i>Explored advanced JavaScript
+                    techniques
+                  </li>
+                  <li>
+                    <i data-lucide="target"></i>Implemented responsive design
+                    principles
+                  </li>
+                  <li>
+                    <i data-lucide="target"></i>Self-taught modern web
+                    development practices
+                  </li>
+                  <li>
+                    <i data-lucide="target"></i>Created portfolio to showcase
+                    skills
+                  </li>
+                </ul>
+              </div>
+              <div class="timeline-tech">
+                <span class="tech-tag">Self-Learning</span>
+                <span class="tech-tag">Initiative</span>
+                <span class="tech-tag">Modern CSS</span>
+                <span class="tech-tag">JavaScript ES6+</span>
+                <span class="tech-tag">Responsive Design</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-year="2024">
+            <div class="timeline-icon">
+              <i data-lucide="code"></i>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>Academic Projects Developer</h3>
+                <span class="timeline-date">
+                  <i data-lucide="calendar"></i>
+                  2023 - 2024
+                </span>
+              </div>
+              <p class="timeline-company">
+                <i data-lucide="book-open"></i>
+                University Projects
+              </p>
+              <p class="timeline-description">
+                Developed multiple web applications as part of my computer
+                science curriculum, focusing on real-world problem solving and
+                practical implementation of programming concepts.
+              </p>
+              <div class="timeline-achievements">
+                <h4>Key Projects:</h4>
+                <ul>
+                  <li>
+                    <i data-lucide="target"></i>E-Learning platform for pilot
+                    training
+                  </li>
+                  <li>
+                    <i data-lucide="target"></i>Dentist cabinet management
+                    system
+                  </li>
+                  <li>
+                    <i data-lucide="target"></i>Interactive portfolio website
+                  </li>
+                </ul>
+              </div>
+              <div class="timeline-tech">
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Bootstrap</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title reveal-text">Education</h2>
+          <p class="section-subtitle">My academic journey</p>
+        </div>
+
+        <div class="education-grid">
+          <div class="education-card">
+            <div class="education-icon">
+              <i data-lucide="graduation-cap"></i>
+            </div>
+            <div class="education-content">
+              <div class="education-header">
+                <h3>Bachelor's in Computer Science</h3>
+                <span class="education-date">
+                  <i data-lucide="calendar"></i>
+                  2022 - 2025
+                </span>
+              </div>
+              <p class="education-school">Saad Dahleb University</p>
+              <p class="education-description">
+                Completed my Bachelor's degree in Computer Science with focus on
+                web development, database management, and software engineering
+                principles.
+              </p>
+              <div class="education-achievements">
+                <h4>Key Learning Areas:</h4>
+                <ul>
+                  <li>
+                    <i data-lucide="award"></i>Web Development (PHP, JavaScript,
+                    HTML/CSS)
+                  </li>
+                  <li>
+                    <i data-lucide="award"></i>Database Design and Management
+                    (MySQL)
+                  </li>
+                  <li>
+                    <i data-lucide="award"></i>Software Engineering Principles
+                  </li>
+                  <li>
+                    <i data-lucide="award"></i>Data Structures and Algorithms
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="education-card">
+            <div class="education-icon">
+              <i data-lucide="book-open"></i>
+            </div>
+            <div class="education-content">
+              <div class="education-header">
+                <h3>Master's in Computer And Network Engineering</h3>
+                <span class="education-date">
+                  <i data-lucide="calendar"></i>
+                  2025 - 2027
+                </span>
+              </div>
+              <p class="education-school">Saad Dahleb University</p>
+              <p class="education-description">
+                Planning to pursue Master's degree to deepen my knowledge in
+                advanced computer science topics and specialize in web
+                technologies.
+              </p>
+              <div class="education-achievements">
+                <h4>Planned Focus Areas:</h4>
+                <ul>
+                  <li><i data-lucide="award"></i>Advanced Web Technologies</li>
+                  <li><i data-lucide="award"></i>Software Architecture</li>
+                  <li>
+                    <i data-lucide="award"></i>Research in Computer Science
+                  </li>
+                  <li><i data-lucide="award"></i>Industry Best Practices</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title reveal-text">Get In Touch</h2>
+          <p class="section-subtitle">
+            Let's discuss opportunities and collaborations
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i data-lucide="mail"></i>
+              </div>
+              <div class="contact-text">
+                <h3>Email</h3>
+                <p>abdeldjalildahnoun@gmail.com</p>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i data-lucide="phone"></i>
+              </div>
+              <div class="contact-text">
+                <h3>Phone</h3>
+                <p>+213 542066207</p>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i data-lucide="map-pin"></i>
+              </div>
+              <div class="contact-text">
+                <h3>Location</h3>
+                <p>Algeria</p>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="social-links">
+              <a href="https://www.linkedin.com/in/abdeldjalil-dahnoun-7b9508317/" class="social-link">
+                <i data-lucide="linkedin"></i>
+              </a>
+              <a href="https://github.com/thisissam-code" class="social-link">
+                <i data-lucide="github"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i data-lucide="twitter"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i data-lucide="instagram"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-form-container">
+            <form class="contact-form" id="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" required />
+                  <div class="input-focus-line"></div>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" required />
+                  <div class="input-focus-line"></div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required />
+                <div class="input-focus-line"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                ></textarea>
+                <div class="input-focus-line"></div>
+              </div>
+
+              <button
+                type="submit"
+                class="btn btn-primary btn-full btn-magnetic"
+              >
+                <span class="btn-text">
+                  <i data-lucide="send"></i>
+                  Send Message
+                </span>
+                <div class="btn-bg"></div>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-left">
+            <div class="footer-logo">
+              <span class="logo-text">AD</span>
+            </div>
+            <p>&copy; 2025 Abdeldjalil Dahnoun. All rights reserved.</p>
+          </div>
+          <div class="footer-right">
+            <div class="footer-links">
+              <a href="#home">Home</a>
+              <a href="#projects">Projects</a>
+              <a href="#skills">Skills</a>
+              <a href="#contact">Contact</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="Portfolio.js"></script>
+  </body>
+</html>
