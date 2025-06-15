@@ -1,9 +1,7 @@
-// Enhanced Portfolio JavaScript with Advanced Animations and Interactions
-
 class Portfolio {
   constructor() {
     this.isLoading = true
-    this.typingTexts = ["CS Graduate", "Web Developer", "PHP Enthusiast", "Problem Solver", "Master's Student"]
+    this.typingTexts = ["Computer Science", "Web Developer", "PHP Enthusiast", "Problem Solver", "Master's Student"]
     this.currentTextIndex = 0
     this.currentCharIndex = 0
     this.isDeleting = false
@@ -28,7 +26,7 @@ class Portfolio {
     this.initializeLucideIcons()
   }
 
-  // Enhanced Loading Screen
+  //  Loading Screen
   showLoadingScreen() {
     const messages = [
       "Initializing Portfolio...",
@@ -90,7 +88,7 @@ class Portfolio {
     }, 4000)
   }
 
-  // Custom Cursor
+  //  Cursor
   setupCustomCursor() {
     if (window.innerWidth <= 768) return
 
@@ -126,7 +124,7 @@ class Portfolio {
     })
   }
 
-  // Floating Particles
+  //  Particles
   setupParticles() {
     const particlesContainer = document.getElementById("particles")
     if (!particlesContainer) return
